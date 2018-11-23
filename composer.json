@@ -1,0 +1,21 @@
+{
+    "name": "kazin8/klick-tipp",
+    "description": "Implementation of klick-tipp api php library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Vasyukov",
+            "email": "kazin8@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kazin8\\KlickTipp\\": "src/"
+        }
+    }
+}
