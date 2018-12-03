@@ -780,7 +780,7 @@ class Connector {
      */
     protected function _http_request($path, $method = 'GET', $data = NULL, $usesession = TRUE, $default_header = array()) {
 
-        $result = new stdClass();
+        $result = new \stdClass();
 
         // Make sure the socket opened properly.
         $fp = @fsockopen($this->port == 443 ? 'ssl://' . $this->host : $this->host, $this->port, $errno, $errstr, 20);
