@@ -794,7 +794,9 @@ class Connector {
 
         // Build HTTP request.
         $default_header['Host'] = 'Host' . ': ' . $this->host;
-        $default_header['Referer'] = 'Referer' . ': //' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'];
+        if (php_sapi_name() !== 'cli' and !defined('STDIN')){
+            $default_header['Referer'] = 'Referer' . ': //' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'];
+        }
         $default_header['Content-Type'] = 'Content-Type' . ': ' . 'application/x-www-form-urlencoded';
 
         // Set session cookie if applicable
